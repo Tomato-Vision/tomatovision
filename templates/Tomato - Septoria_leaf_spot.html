@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>Tomato Vision</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+		
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+
+
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem">Tomato Vision</h1>
+    </div>
+
+   <br>
+   <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/Tomato___Septoria_leaf_spot.JPG' )}}" alt="User Image" style="width:500px;height:500px;">
+                    
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+					
+					<h4><b> Solusi :</b> </h4>
+                    <h6>
+					<b>Menghapus daun yang terinfeksi: </b> Buang segera daun yang terinfeksi, dan pastikan untuk mencuci tangan dan pemangkas secara menyeluruh sebelum menangani tanaman yang tidak terinfeksi.
+					<br>
+<b>Pertimbangkan pilihan fungisida organik:</b> Fungisida yang mengandung tembaga atau kalium bikarbonat akan membantu mencegah penyebaran penyakit. Mulailah menyemprot segera setelah gejala pertama muncul dan ikuti petunjuk label untuk penanganan selanjutnya.
+<br>
+<b>Pertimbangkan fungisida berbahan kimia: </b> Meskipun pilihan bahan kimia tidak ideal, namun bahan kimia mungkin merupakan satu-satunya pilihan untuk mengendalikan infeksi tingkat lanjut. Salah satu yang paling tidak beracun dan paling efektif adalah chlorothalonil (dijual dengan nama Fungonil dan Daconil).
+					
+					<br>
+					<br>
+
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
